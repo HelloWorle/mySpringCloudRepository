@@ -1,7 +1,7 @@
 server:
   port: 8070
   
-msg: Hello2
+msg: Hello3
 
 eureka:
   instance:
