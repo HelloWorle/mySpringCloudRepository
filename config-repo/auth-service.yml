@@ -20,4 +20,6 @@ spring:
     username: zl
     password: zhouli
   jpa:
+    hibernate: 
+      ddl-auto: none
     show-sql: true
