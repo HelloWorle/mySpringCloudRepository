@@ -18,7 +18,7 @@ ribbon:
   ConnectTimeout: 10000
 
 zuul:
-  ignoredServices: '*'
+#  ignoredServices: '*'
   routes:
     auth-service:
       path: /uaa/**
