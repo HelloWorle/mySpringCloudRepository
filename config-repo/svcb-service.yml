@@ -22,3 +22,40 @@ security:
       scope: server
 
 from1: 123321
+
+spring:
+   application:
+      name: oauth
+   datasource:
+      platform: mysql
+      url: jdbc:mysql://localhost/spring?createDatabaseIfNotExist=true&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&transformedBitIsBoolean=true&autoReconnect=true&failOverReadOnly=false
+      username: zl
+      password: zhouli
+      type: com.alibaba.druid.pool.DruidDataSource
+      filters: stat
+      driverClassName: com.mysql.jdbc.Driver
+      max-active: 50
+      max-idle: 40
+      min-idle: 20
+      initial-size: 6
+      validation-query: select 1
+      test-on-borrow: false
+      test-on-return: false
+      test-while-idle: true
+   jpa:
+      properties:
+        hibernate:
+          dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+          #dialect: org.hibernate.dialect.H2Dialect
+      showSql: true
+      hibernate:
+        ddlAuto: update
+        namingStrategy: org.hibernate.cfg.ImprovedNamingStrategy  
+
+mybatis: 
+  mapperLocations: classpath:mapper/*.xml
+  typeAliasesPackage: tk.mapper.model 
+  #mybatis.config：mybatis-config.xml #配置文件的路径
+  #mybatis.typeHandlersPackage：#扫描typeHandlers的包
+  #mybatis.checkConfigLocation：#检查配置文件是否存在
+  #mybatis.executorType：#设置执行模式（SIMPLE, REUSE, BATCH），默认为SIMPLE
