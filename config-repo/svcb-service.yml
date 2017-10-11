@@ -42,6 +42,8 @@ spring:
       test-on-borrow: false
       test-on-return: false
       test-while-idle: true
+      poolPreparedStatements: true
+      maxOpenPreparedStatements: 20
    jpa:
       properties:
         hibernate:
