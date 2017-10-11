@@ -56,7 +56,7 @@ spring:
 
 mybatis: 
   mapperLocations: classpath:mapper/*.xml
-  typeAliasesPackage: tk.mapper.model 
+  typeAliasesPackage: cn.zhangxd.svcb.entity 
   #mybatis.config：mybatis-config.xml #配置文件的路径
   #mybatis.typeHandlersPackage：#扫描typeHandlers的包
   #mybatis.checkConfigLocation：#检查配置文件是否存在
